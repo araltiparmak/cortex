@@ -23,8 +23,7 @@ export class BedrockService {
             role: "user",
             content: [
               {
-                text:
-                  prompt
+                text: prompt,
               },
             ],
           },

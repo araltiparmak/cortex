@@ -13,10 +13,12 @@ app.get("/", (res: Response) => {
   res.send("Hello World!");
 });
 
+type Params = object;
+
 app.post(
   "/query",
   async (
-    req: Request<{}, BedrockResponse | BedrockError, BedrockRequest>,
+    req: Request<Params, BedrockResponse | BedrockError, BedrockRequest>,
     res: Response<BedrockResponse | BedrockError>,
     next: NextFunction,
   ) => {
